@@ -1,6 +1,11 @@
 import pygame
 import sys
 
+################################################################################
+# IMPORTANT:
+# Do this ENTIRE PROJECT by following the associated videos for Dog Bark.
+################################################################################
+
 
 def main():
     # pre-define RGB colors for Pygame
