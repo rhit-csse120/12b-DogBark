@@ -16,7 +16,7 @@ import sys
 
 WHITE = pygame.Color("white")  # (255, 255, 255)
 IMAGE_SIZE = 470
-TEXT_HEIGHT = 30
+TEXT_HEIGHT = 40
 
 # Temporary, to find the fonts on my computer:
 fonts_on_my_computer = pygame.font.get_fonts()
@@ -51,17 +51,18 @@ def main():
             if event.type == pygame.QUIT:
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
+                pygame.mixer.music.stop()
                 bark.play()
 
         # Draw things:
         screen.fill(WHITE)
 
         screen.blit(dog_image, (0, 0))
-
-        screen.blit(caption1, (0, 0))
+        screen.blit(caption1, (100, screen.get_height()))
 
         center = (screen.get_width() - caption2.get_width()) // 2
-        near_bottom = screen.get_height() - TEXT_HEIGHT - 2
+        offset = 5
+        near_bottom = screen.get_height() - caption1.get_height() + offset
         screen.blit(caption2, (center, near_bottom))
 
         pygame.display.update()
