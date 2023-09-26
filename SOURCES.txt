@@ -1,0 +1,5 @@
+whip-110235.mp3:
+  what: Whip, by prazkhanal
+  from: https://pixabay.com/music/beats-whip-110235/
+
+Dog images and sounds:  unknown.
